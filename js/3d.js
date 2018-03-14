@@ -19,10 +19,12 @@ window.addEventListener('resize', function(){
 
 // Sphere 1 #_sp1
 var geo_sp1 = new THREE.SphereGeometry( 1, 32, 32 );
-var texture_sp1 = loader.load("img/marble.jpg");
+var texture_sp1 = loader.load("img/iris.jpg");
+var normal_sp1 = loader.load("img/iris-normal.jpg");
 var mat_sp1 = new THREE.MeshPhongMaterial({
     //color: 0xFF0000,
-    map: texture_sp1
+    map: texture_sp1,
+    normalMap: normal_sp1
 });
 var sp1 = new THREE.Mesh( geo_sp1, mat_sp1 );
 sp1.castShadow = true;
